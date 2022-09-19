@@ -1,0 +1,39 @@
+{
+  "name": "step_project_forkio",
+  "version": "0.0.1",
+  "description": "FE_32 Step Project Forkio Ogniev&Rakhil",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^5.2.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.5",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-uncss": "^1.0.6",
+    "postcss": "^8.3.6",
+    "postcss-uncss": "^0.17.0",
+    "sass": "^1.40.1",
+    "uncss": "^0.17.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/antoxa0105/step-project-forkio.git"
+  },
+  "author": "Igor Rakhil, Anton Ogniev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/antoxa0105/step-project-forkio/issues"
+  },
+  "homepage": "https://gitlab.com/antoxa0105/step-project-forkio#readme"
+}

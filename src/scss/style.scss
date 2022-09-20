@@ -1,17 +1,17 @@
 @import "reset";
 
-input,
-textarea {
-  outline: none;
-}
+// input,
+// textarea {
+//   outline: none;
+// }
 
-button {
-  cursor: pointer;
-}
+// button {
+//   cursor: pointer;
+// }
 
-button:disabled {
-  cursor: default;
-}
+// button:disabled {
+//   cursor: default;
+// }
 
 /*! global */
 
@@ -25,9 +25,9 @@ body {
   font-size: 18px;
 }
 
-body.no-skroll {
-  overflow: auto;
-}
+// body.no-skroll {
+//   overflow: auto;
+// }
 
 .container {
   max-width: 1180px;
@@ -76,7 +76,7 @@ body.no-skroll {
   background: #0097E6;
   box-shadow: 0px 5px 8px rgba(3, 37, 55, 0.25);
   border-radius: 5px;
-  transition: background 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 
 .btn:hover {
@@ -314,18 +314,29 @@ color: #000;
   margin: 0 0 50px;
 }
 
-.no-webp .hero {
-  background: url(../../dist/img/herobg.webp);
-  background-attachment: scroll;
-  background-size:cover;
-  background-attachment: fixed;
-}
+// .no-webp .hero {
+//   background: url(../../dist/img/herobg.webp);
+//   background-attachment: scroll;
+//   background-size:cover;
+//   background-attachment: fixed;
+// }
 
 .hero {
   color: #FFFFFF;
   position: relative;
+  background: url(../../dist/img/herobg.webp);
+  background-attachment: scroll;
+  background-size:cover;
+  background-attachment: fixed;
   z-index: 1;
 }
+
+// .hero {
+//   background: url(../../dist/img/herobg.webp);
+//   background-attachment: scroll;
+//   background-size:cover;
+//   background-attachment: fixed;
+// }
 
 .hero::before {
   content: "";
@@ -416,9 +427,16 @@ color: #000;
   background: #F5F9FF;
 }
 
-.no-webp .bireten__block {
-  background: url("../../dist/img/bireten.webp") no-repeat center/cover;
+.bireten__block {
+  background: url(../../dist/img/bireten.webp);
+  background-attachment: scroll;
+  background-size:cover;
+  background-attachment: fixed;
 }
+
+// .no-webp .bireten__block {
+//   background: url("../../dist/img/bireten.webp") no-repeat center/cover;
+// }
 
 .bireten__block {
   color: #fff;
@@ -1558,20 +1576,6 @@ color: #000;
   }
 }
 
-
-.hero {
-  background: url(../../dist/img/herobg.webp);
-  background-attachment: scroll;
-  background-size:cover;
-  background-attachment: fixed;
-}
-
-.bireten__block {
-  background: url(../../dist/img/bireten.webp);
-  background-attachment: scroll;
-  background-size:cover;
-  background-attachment: fixed;
-}
 
 
 @media (max-width: 399.98px) {

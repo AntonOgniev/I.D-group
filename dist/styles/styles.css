@@ -133,19 +133,6 @@ table {
   border-spacing: 0;
 }
 
-input,
-textarea {
-  outline: none;
-}
-
-button {
-  cursor: pointer;
-}
-
-button:disabled {
-  cursor: default;
-}
-
 /*! global */
 html {
   scroll-behavior: smooth;
@@ -155,10 +142,6 @@ body {
   background: #ffffff;
   font-family: "Inter", sans-serif;
   font-size: 18px;
-}
-
-body.no-skroll {
-  overflow: auto;
 }
 
 .container {
@@ -213,8 +196,8 @@ body.no-skroll {
   background: #0097E6;
   box-shadow: 0px 5px 8px rgba(3, 37, 55, 0.25);
   border-radius: 5px;
-  -webkit-transition: background 0.3s ease-out;
-  transition: background 0.3s ease-out;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 
 .btn:hover {
@@ -447,16 +430,13 @@ a:visited {
   margin: 0 0 50px;
 }
 
-.no-webp .hero {
+.hero {
+  color: #FFFFFF;
+  position: relative;
   background: url(../../dist/img/herobg.webp);
   background-attachment: scroll;
   background-size: cover;
   background-attachment: fixed;
-}
-
-.hero {
-  color: #FFFFFF;
-  position: relative;
   z-index: 1;
 }
 
@@ -549,8 +529,11 @@ a:visited {
   background: #F5F9FF;
 }
 
-.no-webp .bireten__block {
-  background: url("../../dist/img/bireten.webp") no-repeat center/cover;
+.bireten__block {
+  background: url(../../dist/img/bireten.webp);
+  background-attachment: scroll;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .bireten__block {
@@ -1738,20 +1721,6 @@ a:visited {
     text-align: center;
   }
 }
-.hero {
-  background: url(../../dist/img/herobg.webp);
-  background-attachment: scroll;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-.bireten__block {
-  background: url(../../dist/img/bireten.webp);
-  background-attachment: scroll;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
 @media (max-width: 399.98px) {
   .personal__cards {
     flex-wrap: wrap;

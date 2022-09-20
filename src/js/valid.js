@@ -1,10 +1,10 @@
 const sendEmail = (unternehmen, name, email, telefonnumer, nachricht) => {
 	Email.send({
 		Host: "smtp.elasticemail.com",
-		Username: "antoxa0105@gmail.com",
-		Password: "112B2B2E202643A78C8B3FD1BC0EB8AED03A",
-		To: 'antoxa0105@gmail.com',
-		From: "antoxa0105@gmail.com",
+		Username: "office@idgroup.com.pl",
+		Password: "C86CE50B114AB5584B5694FC2A8386306B52",
+		To: 'office@idgroup.com.pl',
+		From: "office@idgroup.com.pl",
 		Subject: `Unternehmen: ${unternehmen}`,
 		Body: `<html><h2>Name: ${name}</h2><strong>Email Adresse: ${email} , Telefonnummer: ${telefonnumer}</strong><br></br><em>Nachricht: ${nachricht}</em></html>`
 	}).then(

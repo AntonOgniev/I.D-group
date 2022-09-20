@@ -1,6 +1,0 @@
----
-deployment:
-tasks:
-- export DEPLOYPATH=/home/idgroupc/public_html
-- /bin/cp -R имя_папки_в_репозитории $DEPLOYPATH
-- /bin/cp имя_файла_в_репозитории $DEPLOYPATH

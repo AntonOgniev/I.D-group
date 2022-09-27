@@ -68,7 +68,7 @@ gulp.task('dev', function() {
     });
     gulp.watch("src/scss/*.scss", buildSass);
     gulp.watch("index.html").on('change', browserSync.reload);
-    gulp.watch("src/js/*.js", buildJs);
+    gulp.watch("./src/js/*.js", buildJs);
 });
 
 exports.build = series(

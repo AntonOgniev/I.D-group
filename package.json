@@ -4,7 +4,9 @@
   "description": "FE_32 Step Project Forkio Ogniev&Rakhil",
   "main": "index.js",
   "dependencies": {
-    "bootstrap": "^5.2.1"
+    "bootstrap": "^5.2.1",
+    "jquery": "^3.6.1",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "browser-sync": "^2.27.5",

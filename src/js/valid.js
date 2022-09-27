@@ -18,7 +18,7 @@ const unternehmenForm = document.querySelector("#msgOne"),
 	phoneForm = document.querySelector("#inputPhone"),
 	nachrichtForm = document.querySelector("#msg"),
 	checkboxForm = document.querySelector("#inputCheckbox"),
-	btnForm = document.querySelector(".form__btn.btn"),
+	btnForm = document.querySelector(".contact-form__btn"),
 	formBody = {};
 
 

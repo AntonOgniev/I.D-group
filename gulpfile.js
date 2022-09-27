@@ -24,7 +24,7 @@ const clearCss = function () {
     const plugins = [
         uncss({
             html: ['index.html', '*.html', 'http://example.com'],
-            ignore:[/\.js-active/, /\.js-animate/]
+            ignore:[/\.active/, /\.sticky/]
         }),
     ];
     return gulp.src('./dist/**/*.css')

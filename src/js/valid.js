@@ -1,8 +1,6 @@
 const sendEmail = (unternehmen, name, email, telefonnumer, nachricht) => {
 	Email.send({
-		Host: "smtp.elasticemail.com",
-		Username: "office@idgroup.com.pl",
-		Password: "C86CE50B114AB5584B5694FC2A8386306B52",
+		SecureToken : "944f6ecb-decd-43ec-b7bf-ed36a4de5d90",
 		To: 'office@idgroup.com.pl',
 		From: "office@idgroup.com.pl",
 		Subject: `Unternehmen: ${unternehmen}`,

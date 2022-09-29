@@ -1,14 +1,34 @@
-const sendEmail = (unternehmen, name, email, telefonnumer, nachricht) => {
-	Email.send({
-		SecureToken : "944f6ecb-decd-43ec-b7bf-ed36a4de5d90",
-		To: 'office@idgroup.com.pl',
-		From: "office@idgroup.com.pl",
-		Subject: `Unternehmen: ${unternehmen}`,
-		Body: `<html><h2>Name: ${name}</h2><strong>Email Adresse: ${email} , Telefonnummer: ${telefonnumer}</strong><br></br><em>Nachricht: ${nachricht}</em></html>`
-	}).then(
-		message => alert(message)
-	);
-}
+// const sendEmail = (unternehmen, name, email, telefonnumer, nachricht) => {
+// 	Email.send({
+// 		SecureToken : "944f6ecb-decd-43ec-b7bf-ed36a4de5d90",
+// 		To: 'office@idgroup.com.pl',
+// 		From: "office@idgroup.com.pl",
+// 		Subject: `Unternehmen: ${unternehmen}`,
+// 		Body: `<html><h2>Name: ${name}</h2><strong>Email Adresse: ${email} , Telefonnummer: ${telefonnumer}</strong><br></br><em>Nachricht: ${nachricht}</em></html>`
+// 	}).then(
+// 		message => alert(message)
+// 	);
+// }
+
+
+function send(event, php){
+    console.log("Отправка запроса");
+    event.preventDefault ? event.preventDefault() : event.returnValue = false;
+    var req = new XMLHttpRequest();
+    req.open('POST', php, true);
+    req.onload = function() {
+        if (req.status >= 200 && req.status < 400) {
+        json = JSON.parse(this.response);
+            console.log(json);
+            if (json.result == "success") {
+                alert("Сообщение отправлено");
+            } else {
+                alert("Ошибка. Сообщение не отправлено");
+            }
+        } else {alert("Ошибка сервера. Номер: "+req.status);}}; 
+    req.onerror = function() {alert("Ошибка отправки запроса");};
+    req.send(new FormData(event.target));
+    }
 
 const unternehmenForm = document.querySelector("#msgOne"),
 	nameForm = document.querySelector("#name"),
@@ -56,7 +76,7 @@ const validateForm = () => {
 	const { unternehmen, name, email, phone, nachricht, checked } = formBody
 	if (unternehmen && name && email && phone && nachricht && checked) {
 		try {
-			sendEmail(unternehmen, name, email, phone, nachricht)
+			send(unternehmen, name, email, phone, nachricht)
 		} catch (error) {
 			console.log(error)
 		}
@@ -87,3 +107,7 @@ checkboxForm.addEventListener("click", function () {
 		btnForm.setAttribute("disabled","")
 	}
 })
+
+
+
+

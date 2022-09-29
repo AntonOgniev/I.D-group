@@ -424,26 +424,26 @@
 </section>
 	<section class="contact-section" id="Kontakt">
 				<div class="contact-form">
-					<form action="#" class="contact-form__form">
+					<form action="#" enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'send.php')" class="contact-form__form">
 						<div class="contact-form__item">
 							<label for="msgOne">Unternehmen</label>
 							<textarea class="input__mess" name="unternehmen" id="msgOne"></textarea>
 						</div>
 						<div class="contact-form__item">
 							<label for="name">Name</label>
-							<input class="input__name input" type="text" id="name">
+							<input class="input__name input" type="text" id="name" name="name">
 						</div>
 						<div class="contact-form__item">
 							<label for="emailInp">Email Adresse</label>
-							<input type="text" class="input__email input" id="emailInp">
+							<input type="text" class="input__email input" id="emailInp" name="email">
 						</div>
 						<div class="contact-form__item">
 							<label for="inputPhone">Telefonnummer</label>
-							<input type="text" class="input__phone input" id="inputPhone">
+							<input type="text" class="input__phone input" id="inputPhone" name="phone">
 						</div>
 						<div class="contact-form__item">
 							<label for="msg">Nachricht</label>
-							<textarea type="text" class="input__message" name="message" id="msg"></textarea>
+							<textarea type="text" class="input__message" name="message" id="msg" name="text"></textarea>
 						</div>
 						<div class="contact-form__item">
 							<label for="inputCheckbox">DVSGO</label>
@@ -466,7 +466,7 @@
 						<li class="contact__list--item">
 							<img class="contact__logo" src="./dist/img/phone-solid.svg" alt="">
 							<a href="tel: +48223897979">
-								Tel: +48223897979 (Anrufe: Mo.-Fr. 09:00 - 15:00 Uhr)
+								Tel: +486668277740 (Anrufe: Mo.-Fr. 09:00 - 15:00 Uhr)
 							</a>
 						</li>
 						<li class="contact__list--item">
@@ -478,7 +478,7 @@
 						<li class="contact__list--item">
 							<img class="contact__logo" src="./dist/img/envelope-solid.svg" alt="">
 							<a href="mailto: office@idgroup.com.pl">
-								E-Mail: office@idgroup.com.pl
+								E-Mail: i.d.group.sp@gmail.com
 							</a>
 						</li>
 					</ul>
@@ -498,15 +498,6 @@
 					</div>
 					<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2377.4162647352937!2d14.540946315704973!3d53.425265076498356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47aa091828780003%3A0xd0ccde5267b3b41f!2zV8WCYWR5c8WCYXdhIMWBb2tpZXRrYSA1LCA3MS04OTkgU3pjemVjaW4sINCf0L7Qu9GM0YnQsA!5e0!3m2!1suk!2sch!4v1663415935296!5m2!1suk!2sch" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 				</div>
-				<form enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'send.php')">
-					<p>Имя</p>
-					<input placeholder="Представьтесь" name="name" type="text" >
-					<p>Email</p>
-					<input placeholder="Укажите почту" name="email" type="text" >
-					<p>Сообщение</p>
-					<textarea name="text"></textarea>
-					<p><input value="Отправить" type="submit"></p>
-			   </form>
 	</section>
 	<footer class="footer">
 		<div class="footer__top">

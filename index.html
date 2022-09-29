@@ -427,27 +427,27 @@
 					<form action="#" enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'send.php')" class="contact-form__form">
 						<div class="contact-form__item">
 							<label for="msgOne">Unternehmen</label>
-							<textarea class="input__mess" name="unternehmen" id="msgOne"></textarea>
+							<textarea class="input__mess" name="unternehmen" id="msgOne" required></textarea>
 						</div>
 						<div class="contact-form__item">
 							<label for="name">Name</label>
-							<input class="input__name input" type="text" id="name" name="name">
+							<input class="input__name input" type="text" id="name" name="name" required>
 						</div>
 						<div class="contact-form__item">
 							<label for="emailInp">Email Adresse</label>
-							<input type="text" class="input__email input" id="emailInp" name="email">
+							<input type="text" class="input__email input" id="emailInp" name="email" required>
 						</div>
 						<div class="contact-form__item">
 							<label for="inputPhone">Telefonnummer</label>
-							<input type="text" class="input__phone input" id="inputPhone" name="phone">
+							<input type="text" class="input__phone input" id="inputPhone" name="phone" required>
 						</div>
 						<div class="contact-form__item">
 							<label for="msg">Nachricht</label>
-							<textarea type="text" class="input__message" name="message" id="msg" name="text"></textarea>
+							<textarea type="text" class="input__message" name="message" id="msg" name="text" required></textarea>
 						</div>
 						<div class="contact-form__item">
 							<label for="inputCheckbox">DVSGO</label>
-							<div class="checkbox__body"><input type="checkbox" class="input__checkbox" id="inputCheckbox"><span>Ja,
+							<div class="checkbox__body"><input type="checkbox" class="input__checkbox" id="inputCheckbox" required><span>Ja,
 									ich stimme der
 									Datenschutzerklärung
 									zu.</span>

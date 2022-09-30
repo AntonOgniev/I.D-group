@@ -1,12 +1,11 @@
 {
-  "name": "step_project_forkio",
+  "name": "idgroup",
   "version": "0.0.1",
-  "description": "FE_32 Step Project Forkio Ogniev&Rakhil",
-  "main": "index.js",
+  "description": "",
+  "main": "script.js",
   "dependencies": {
-    "bootstrap": "^5.2.1",
     "jquery": "^3.6.1",
-    "slick-carousel": "^1.8.1"
+    "swiper": "^8.4.2"
   },
   "devDependencies": {
     "browser-sync": "^2.27.5",
@@ -30,12 +29,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/antoxa0105/step-project-forkio.git"
+    "url": "git+https://github.com/AntonOgniev/I.D-group"
   },
-  "author": "Igor Rakhil, Anton Ogniev",
+  "author": "Anton Ogniev",
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/antoxa0105/step-project-forkio/issues"
+    "url": "https://github.com/AntonOgniev/I.D-group"
   },
-  "homepage": "https://gitlab.com/antoxa0105/step-project-forkio#readme"
+  "homepage": "http://idgroup.com.pl/"
 }

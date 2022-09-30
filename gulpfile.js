@@ -9,8 +9,6 @@ const concat = require('gulp-concat');
 const cleanCSS = require('gulp-clean-css');
 const clean = require('gulp-clean');
 const imagemin = require('gulp-imagemin');
-const postcss = require('gulp-postcss');
-const uncss = require('postcss-uncss');
 const uglify = require('gulp-uglify');
 const pipeline = require('readable-stream').pipeline;
 
@@ -18,18 +16,6 @@ const pipeline = require('readable-stream').pipeline;
 const cleanDist = function() {
     return gulp.src('dist/*', {read: false})
         .pipe(clean());
-};
-
-const clearCss = function () {
-    const plugins = [
-        uncss({
-            html: ['index.html', '*.html', 'http://example.com'],
-            ignore:[/\.active/, /\.sticky/]
-        }),
-    ];
-    return gulp.src('./dist/**/*.css')
-        .pipe(postcss(plugins))
-        .pipe(gulp.dest('dist'));
 };
 
 const images = function(){
@@ -52,7 +38,7 @@ const buildSass = function() {
 const buildJs = function() {
     return gulp.src("./src/js/*.js")
         .pipe(concat('script.js'))
-        .pipe(uglify({toplevel: true}))
+        .pipe(uglify())
         .pipe(gulp.dest("./dist/js"))
    };
 
@@ -68,13 +54,12 @@ gulp.task('dev', function() {
     });
     gulp.watch("src/scss/*.scss", buildSass);
     gulp.watch("index.html").on('change', browserSync.reload);
-    gulp.watch("./src/js/*.js", buildJs);
+    gulp.watch("src/js/*.js", buildJs);
 });
 
 exports.build = series(
     cleanDist,
     buildSass,
-    clearCss,
     minifyCss,
     buildJs,
     images, 
